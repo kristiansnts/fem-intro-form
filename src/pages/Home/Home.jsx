@@ -3,17 +3,17 @@ import './Home.module.css'
 const Home = () => {
   return (
     <main className="flex h-screen items-center justify-center">
-      <section className='w-4/5 sm:flex'>
-        <div className="intro text-center text-white mb-8">
+      <section className='w-4/5 lg:flex'>
+        <div className="intro text-center text-white mb-8 flex flex-col justify-center lg:w-1/2 lg:text-left lg:mr-20">
           <h1 className='text-3xl font-bold mb-5'>Learn to code by watching others</h1>
-          <p className='text-md'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          <p className='text-sm'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
             but understanding how developers think is invaluable. </p>
         </div>
         <div className="form__action">
           <button className='w-full my-3 p-4 bg-accent-blue rounded-md shadow-md'>
             <span className='block w-3/5 mx-auto text-white text-xs font-normal'><strong className='font-bold'>Try it free 7 days </strong>then $20/mo. thereafter</span>
           </button>
-          <form className='p-5 my-2 bg-white rounded'>
+          <form className='p-5 my-2 bg-white rounded shadow-lg'>
             <div className="form__group">
               <input 
                 type="text" 
