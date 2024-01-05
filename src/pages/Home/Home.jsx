@@ -9,7 +9,7 @@ const {
   formState: {errors}
 } = useForm();
 
-const onSubmit = (data) => console.log(data)
+const onSubmit = () => alert("Claim Success!")
 
   return (
     <main className="flex h-screen items-center justify-center">
