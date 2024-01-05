@@ -4,8 +4,17 @@
 
 @layer base {
     body {
-        @apply bg-primary-red
-        bg-[url("src/assets/images/bg-intro-desktop.png")]
-        bg-no-repeat
+        @apply bg-primary-red;
+        @apply bg-[url("src/assets/images/bg-intro-mobile.png")];
+        @apply bg-no-repeat;
+        @apply bg-cover;
+    }
+
+    @media (min-width: 640px) {
+        body {
+            @apply bg-[url("src/assets/images/bg-intro-desktop.png")];
+            @apply bg-no-repeat;
+            @apply bg-cover;
+        }
     }
 }
