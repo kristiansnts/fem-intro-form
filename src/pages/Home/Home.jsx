@@ -1,6 +1,11 @@
+import { useForm } from 'react-hook-form'
 import './Home.module.css'
 
 const Home = () => {
+
+const {register, handleSubmit} = useForm();
+
+const onSubmit = (data) => console.log(data)
 
   return (
     <main className="flex h-screen items-center justify-center">
@@ -10,33 +15,40 @@ const Home = () => {
           <button className='w-full my-3 p-4 bg-accent-blue rounded-md shadow-md'>
             <span className='block w-3/5 mx-auto text-white text-xs font-normal'><strong className='font-bold'>Try it free 7 days </strong>then $20/mo. thereafter</span>
           </button>
-          <form className='p-5 my-2 bg-white rounded shadow-lg'>
+          <form 
+            className='p-5 my-2 bg-white rounded shadow-lg'
+            onSubmit={handleSubmit(onSubmit)}  
+          >
             <div className="form__group">
               <input 
                 type="text" 
                 placeholder="First Name"
-                className='w-full p-3 mb-3 text-sm text-slate-600 font-medium border rounded '
+                className='w-full p-3 mb-3 text-sm text-slate-600 font-medium border rounded'
+                {...register("firstname")}
               />
             </div>
             <div className="form__group">
               <input 
                 type="text" 
                 placeholder="Last Name"
-                className='w-full p-3 mb-3 text-sm text-slate-600 font-medium border rounded '
+                className='w-full p-3 mb-3 text-sm text-slate-600 font-medium border rounded'
+                {...register("lastname")}
               />
             </div>
             <div className="form__group">
               <input 
-                type="text" 
+                type="email" 
                 placeholder="Email Address"
-                className='w-full p-3 mb-3 text-sm text-slate-600 font-medium border rounded '
+                className='w-full p-3 mb-3 text-sm text-slate-600 font-medium border rounded'
+                {...register("email")}
               />
             </div>
             <div className="form__group">
               <input 
-                type="text" 
+                type="password" 
                 placeholder="Password"
-                className='w-full p-3 mb-3 text-sm text-slate-600 font-medium border rounded '
+                className='w-full p-3 mb-3 text-sm text-slate-600 font-medium border rounded'
+                {...register("password")}
               />
             </div>
             <button 
